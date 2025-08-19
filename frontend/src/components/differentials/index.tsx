@@ -4,6 +4,7 @@ import Section from "../section";
 
 const DifferencialsSection = styled.div`
   height: fit-content;
+  scroll-margin-top: 120px;
 
   h1 {
     width: 200px;
@@ -81,7 +82,7 @@ export default function Differentials() {
     },
   ];
   return (
-    <DifferencialsSection>
+    <DifferencialsSection id="projects">
       <Section title="Meus diferenciais" />
       <h1>
         O QUE ME <b>DESTACA</b>

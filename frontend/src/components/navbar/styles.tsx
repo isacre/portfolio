@@ -3,11 +3,15 @@ import styled from "styled-components";
 export const Content = styled.div`
   width: 100%;
   height: 100px;
-  padding-top: 15px;
   display: flex;
   align-items: center;
   justify-content: space-between;
-  margin-bottom: 20px;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  background-color: rgba(25, 25, 27, 0.9);
+  backdrop-filter: blur(10px);
+  border-bottom: 1px solid rgba(255, 79, 90, 0.1);
 `;
 
 export const LogoWrapper = styled.div`
@@ -22,22 +26,28 @@ export const Routes = styled.div<any>`
   justify-content: space-around;
   width: 500px;
 
-  .selected {
-    color: var(--color-main);
-    ::before {
-      content: "";
-      position: absolute;
-      width: 100%;
-      transform: scaleX(1);
-      height: 3px;
-      bottom: -5px;
-      left: 0;
-      background-color: var(--color-main);
-      transform-origin: bottom left;
-      transition: transform 0.3s ease-out;
-      border-radius: 5px;
+  a {
+    text-decoration: none;
+    color: inherit;
+
+    &.selected p {
+      color: var(--color-main);
+      ::before {
+        content: "";
+        position: absolute;
+        width: 100%;
+        transform: scaleX(1);
+        height: 3px;
+        bottom: -5px;
+        left: 0;
+        background-color: var(--color-main);
+        transform-origin: bottom left;
+        transition: transform 0.3s ease-out;
+        border-radius: 5px;
+      }
     }
   }
+
   p {
     font-family: Raleway, sans-serif;
     font-size: 17px;

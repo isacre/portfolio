@@ -12,7 +12,7 @@ import Section from "../section";
 
 export default function Profile() {
   return (
-    <IntroductionSection>
+    <IntroductionSection id="profile">
       <IntroductionWrapper>
         <Introduction>
           <Section title="Introdução" />

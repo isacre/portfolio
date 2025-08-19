@@ -6,6 +6,7 @@ const ContactMeSection = styled.div`
   text-align: justify;
   padding-top: 20px;
   height: fit-content;
+  scroll-margin-top: 120px;
   p {
     margin-top: 5px;
     font-size: 18px;
@@ -69,14 +70,16 @@ const FormWrapper = styled.div`
 
 export default function ContactMe() {
   return (
-    <ContactMeSection>
+    <ContactMeSection id="contact">
       <Section title="Contato" />
       <h1>
         <b>MANDE</b> UMA MENSAGEM
       </h1>
       <ContactMeBox>
         <Text>
-          <p>Vamos nos conhecer melhor?, entre em contato e vamos marcar uma call</p>
+          <p>
+            Vamos nos conhecer melhor?, entre em contato e vamos marcar uma call
+          </p>
           <br />
           <b>E-mail</b>
           <p>isaacalvesx7@gmail.com</p>

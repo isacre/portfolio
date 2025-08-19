@@ -7,6 +7,7 @@ import BuildImageUrl from "../../utils";
 const Technology = styled.div`
   display: flex;
   flex-direction: column;
+  scroll-margin-top: 120px;
 `;
 
 const Wrapper = styled.div`
@@ -44,9 +45,8 @@ export default function Technologyes({
 }: {
   tecnologies: Tecnology[];
 }) {
-  console.log(tecnologies);
   return (
-    <Technology>
+    <Technology id="carrer">
       <Wrapper>
         {tecnologies.map((item) => {
           return (

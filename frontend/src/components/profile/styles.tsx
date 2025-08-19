@@ -4,6 +4,7 @@ export const IntroductionSection = styled.div`
   height: 600px;
   display: flex;
   align-items: center;
+  scroll-margin-top: 120px;
 `;
 
 export const IntroductionWrapper = styled.div`

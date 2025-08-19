@@ -11,6 +11,11 @@ const GlobalStyle = createGlobalStyle`
     --color-background-black: rgb(25,25,27);
     --color-main: rgb(255,79,90);
 }
+
+html {
+    scroll-behavior: smooth;
+}
+
 * {
     margin: 0;
     padding: 0;
