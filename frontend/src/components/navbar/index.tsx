@@ -24,12 +24,10 @@ export default function NavBar(props: { url: string }) {
       const sections = Menus.map((menu) => {
         const id = menu.route.split("#")[1];
         const element = document.getElementById(id);
-        console.log(`Looking for section: ${id}`, element);
         return { id, element };
       }).filter((section) => section.element);
 
-      const scrollPosition = window.scrollY + 120; // Offset for sticky header
-      console.log("Scroll position:", scrollPosition);
+      const scrollPosition = window.scrollY + 120;
 
       for (let i = sections.length - 1; i >= 0; i--) {
         const section = sections[i];

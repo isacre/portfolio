@@ -1,6 +1,5 @@
-import React from "react";
 import styled from "styled-components";
-import Section from "../section";
+import Section from "../../section";
 
 const DifferencialsSection = styled.div`
   height: fit-content;
@@ -60,12 +59,14 @@ const Skill = styled.div`
 export default function Differentials() {
   const Differentials = [
     {
-      description: "Busco sempre criar código de qualidade, visando a escalabilidade e facilitar as manutenções futuras",
+      description:
+        "Busco sempre criar código de qualidade, visando a escalabilidade e facilitar as manutenções futuras",
       title: "Front-end",
       subtitle: "Qualidade de código",
     },
     {
-      description: "Me expresso e faço amizade com facilidade, evito conflitos desnecessários e sei me adaptar ao meio em que me encontro",
+      description:
+        "Me expresso e faço amizade com facilidade, evito conflitos desnecessários e sei me adaptar ao meio em que me encontro",
       title: "Pessoal",
       subtitle: "Comunicação",
     },
@@ -76,13 +77,14 @@ export default function Differentials() {
       subtitle: "Automotivação",
     },
     {
-      description: "Sempre sonhei em trabalhar com algo que envolvesse tecnologia e criatividade.",
+      description:
+        "Sempre sonhei em trabalhar com algo que envolvesse tecnologia e criatividade.",
       title: "Front-end",
       subtitle: "Amor pelo o que faz",
     },
   ];
   return (
-    <DifferencialsSection id="projects">
+    <DifferencialsSection>
       <Section title="Meus diferenciais" />
       <h1>
         O QUE ME <b>DESTACA</b>

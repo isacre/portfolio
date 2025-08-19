@@ -3,11 +3,7 @@ import { BsLinkedin, BsGithub, BsInstagram } from "react-icons/bs";
 
 export const Menus: Menu[] = [
   {
-    text: "Perfil",
-    route: "/home/#profile",
-  },
-  {
-    text: "Sobre",
+    text: "Sobre Mim",
     route: "/home/#about",
   },
   {
@@ -20,7 +16,7 @@ export const Menus: Menu[] = [
   },
   {
     text: "Entre em contato",
-    route: "/home/#contact",
+    route: "/home/#contact-me",
   },
 ];
 

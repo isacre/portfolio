@@ -70,7 +70,7 @@ const FormWrapper = styled.div`
 
 export default function ContactMe() {
   return (
-    <ContactMeSection id="contact">
+    <ContactMeSection id="contact-me">
       <Section title="Contato" />
       <h1>
         <b>MANDE</b> UMA MENSAGEM

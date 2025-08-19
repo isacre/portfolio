@@ -40,23 +40,62 @@ const Wrapper = styled.div`
   }
 `;
 
+const SkeletonBox = styled.div`
+  width: 40px;
+  height: 40px;
+  padding: 25px;
+  background: linear-gradient(90deg, #2d3033 25%, #3a3d40 50%, #2d3033 75%);
+  background-size: 200% 100%;
+  border-radius: 10px;
+  margin-top: 10px;
+  animation: shimmer 1.5s infinite;
+
+  @keyframes shimmer {
+    0% {
+      background-position: -200% 0;
+    }
+    100% {
+      background-position: 200% 0;
+    }
+  }
+`;
+
+const SkeletonGrid = () => {
+  // Create 24 skeleton boxes to fill the grid
+  const skeletonCount = 24;
+
+  return (
+    <>
+      {Array.from({ length: skeletonCount }).map((_, index) => (
+        <SkeletonBox key={`skeleton-${index}`} />
+      ))}
+    </>
+  );
+};
+
 export default function Technologyes({
   tecnologies,
+  isLoading,
 }: {
   tecnologies: Tecnology[];
+  isLoading: boolean;
 }) {
   return (
-    <Technology id="carrer">
+    <Technology>
       <Wrapper>
-        {tecnologies.map((item) => {
-          return (
-            <img
-              key={item.documentId}
-              src={BuildImageUrl(item?.icon?.url)}
-              alt={item.name}
-            />
-          );
-        })}
+        {isLoading ? (
+          <SkeletonGrid />
+        ) : (
+          tecnologies.map((item) => {
+            return (
+              <img
+                key={item.documentId}
+                src={BuildImageUrl(item?.icon?.url)}
+                alt={item.name}
+              />
+            );
+          })
+        )}
       </Wrapper>
     </Technology>
   );

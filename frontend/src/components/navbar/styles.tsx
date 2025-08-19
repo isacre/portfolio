@@ -11,7 +11,6 @@ export const Content = styled.div`
   z-index: 1000;
   background-color: rgba(25, 25, 27, 0.9);
   backdrop-filter: blur(10px);
-  border-bottom: 1px solid rgba(255, 79, 90, 0.1);
 `;
 
 export const LogoWrapper = styled.div`

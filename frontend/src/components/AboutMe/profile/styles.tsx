@@ -1,7 +1,7 @@
 import styled from "styled-components";
 
 export const IntroductionSection = styled.div`
-  height: 600px;
+  height: 450px;
   display: flex;
   align-items: center;
   scroll-margin-top: 120px;

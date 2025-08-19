@@ -7,12 +7,12 @@ import {
   Picture,
   SocialMediaButtons,
 } from "./styles";
-import profilePicture from "../../assets/picture.png";
-import Section from "../section";
+import profilePicture from "../../../assets/picture.png";
+import Section from "../../section";
 
 export default function Profile() {
   return (
-    <IntroductionSection id="profile">
+    <IntroductionSection id="about">
       <IntroductionWrapper>
         <Introduction>
           <Section title="Introdução" />
@@ -21,8 +21,9 @@ export default function Profile() {
             Eu sou o <b>Isaac</b>
           </h1>
           <p>
-            Um desenvolvedor de front-end <b>autodidata</b>, apaixonado por{" "}
-            <b>aprendizado</b> e por <b>código.</b>
+            Desenvolvedor de software <b>autodidata</b>, apaixonado por{" "}
+            <b>aprendizado</b> e <b>código</b>, especializado em{" "}
+            <b>front-end</b> e capaz de atuar em todo o ciclo <b>full stack</b>.
           </p>
           <SocialMediaButtons>
             <a

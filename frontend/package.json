@@ -10,6 +10,7 @@
     "test": "jest --watchAll --env=jsdom"
   },
   "dependencies": {
+    "@tanstack/react-query": "^5.85.5",
     "@testing-library/jest-dom": "^5.16.5",
     "@testing-library/react": "^13.4.0",
     "@types/styled-components": "^5.1.26",
@@ -31,8 +32,11 @@
     "@types/react": "^18.0.17",
     "@types/react-dom": "^18.0.6",
     "@vitejs/plugin-react": "^2.1.0",
+    "autoprefixer": "^10.4.21",
     "babel-jest": "^29.0.3",
     "jest": "^29.0.3",
+    "postcss": "^8.5.6",
+    "tailwindcss": "^4.1.12",
     "typescript": "^4.6.4",
     "vite": "^3.1.0"
   }
