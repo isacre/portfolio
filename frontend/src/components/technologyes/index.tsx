@@ -1,7 +1,8 @@
 import React from "react";
 import styled from "styled-components";
 import Section from "../section";
-import { Tech } from "./data";
+import { Tecnology } from "../../types";
+import BuildImageUrl from "../../utils";
 
 const Technology = styled.div`
   display: flex;
@@ -34,15 +35,27 @@ const Wrapper = styled.div`
     background-color: rgba(45, 48, 51, 0.267);
     border-radius: 10px;
     margin-top: 10px;
+    object-fit: contain;
   }
 `;
 
-export default function Technologyes() {
+export default function Technologyes({
+  tecnologies,
+}: {
+  tecnologies: Tecnology[];
+}) {
+  console.log(tecnologies);
   return (
     <Technology>
       <Wrapper>
-        {Tech.map((item) => {
-          return <img src={item.img} alt={item.name} />;
+        {tecnologies.map((item) => {
+          return (
+            <img
+              key={item.documentId}
+              src={BuildImageUrl(item?.icon?.url)}
+              alt={item.name}
+            />
+          );
         })}
       </Wrapper>
     </Technology>

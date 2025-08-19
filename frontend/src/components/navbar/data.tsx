@@ -3,10 +3,6 @@ import { BsLinkedin, BsGithub, BsInstagram } from "react-icons/bs";
 
 export const Menus: Menu[] = [
   {
-    text: "Home",
-    route: "/home",
-  },
-  {
     text: "Sobre",
     route: "/home/#about",
   },
@@ -16,11 +12,11 @@ export const Menus: Menu[] = [
   },
   {
     text: "Carreira",
-    route: "/carrer",
+    route: "/home/#carrer",
   },
   {
     text: "Entre em contato",
-    route: "/contact-me",
+    route: "/home/#contact",
   },
 ];
 
@@ -32,9 +28,5 @@ export const SocialMedia: SocialMediaRoute[] = [
   {
     route: "https://github.com/Isacre",
     icon: BsGithub,
-  },
-  {
-    route: "https://www.instagram.com/oisacre/",
-    icon: BsInstagram,
   },
 ];

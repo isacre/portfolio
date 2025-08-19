@@ -1,6 +1,12 @@
-import React from "react";
 import { BsGithub, BsLinkedin } from "react-icons/bs";
-import { Button, Introduction, IntroductionSection, IntroductionWrapper, Picture, SocialMediaButtons } from "./styles";
+import {
+  Button,
+  Introduction,
+  IntroductionSection,
+  IntroductionWrapper,
+  Picture,
+  SocialMediaButtons,
+} from "./styles";
 import profilePicture from "../../assets/picture.png";
 import Section from "../section";
 
@@ -15,16 +21,25 @@ export default function Profile() {
             Eu sou o <b>Isaac</b>
           </h1>
           <p>
-            Um desenvolvedor de front-end <b>autodidata</b>, apaixonado por <b>aprendizado</b> e por <b>código.</b>
+            Um desenvolvedor de front-end <b>autodidata</b>, apaixonado por{" "}
+            <b>aprendizado</b> e por <b>código.</b>
           </p>
           <SocialMediaButtons>
-            <a href={"https://www.linkedin.com/in/isaac-alves-melo-319b45185/"} target="_blank" rel="noreferrer">
+            <a
+              href={"https://www.linkedin.com/in/isaac-alves-melo-319b45185/"}
+              target="_blank"
+              rel="noreferrer"
+            >
               <Button className="linkedin">
                 <BsLinkedin color="var(--color-background-black)" />
                 <div>LinkedIn</div>
               </Button>
             </a>
-            <a href={"https://github.com/Isacre"} target="_blank" rel="noreferrer">
+            <a
+              href={"https://github.com/Isacre"}
+              target="_blank"
+              rel="noreferrer"
+            >
               <Button className="github">
                 <BsGithub />
                 <div>Github</div>

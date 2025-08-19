@@ -32,7 +32,14 @@ export const Introduction = styled.div`
     font-weight: 400;
   }
 `;
-export const Picture = styled.img``;
+export const Picture = styled.img`
+  width: 400px;
+  height: 400px;
+  border-radius: 50%;
+  object-fit: cover;
+  box-shadow: 0 0 20px 0 rgba(220, 53, 69, 0.12),
+    0 0 8px 0 rgba(220, 53, 69, 0.08);
+`;
 
 export const SocialMediaButtons = styled.div`
   display: flex;

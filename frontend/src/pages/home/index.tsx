@@ -4,6 +4,8 @@ import Differentials from "../../components/differentials";
 import AboutMe from "../../components/about-me";
 import Technologyes from "../../components/technologyes";
 import ContactMe from "../../components/contact-me";
+import { useQuery } from "@tanstack/react-query";
+import { getTecnologies } from "../../services";
 
 const Component = styled.div`
   display: flex;
@@ -15,12 +17,17 @@ const Component = styled.div`
 `;
 
 export default function Home() {
+  const { data, isLoading, error } = useQuery({
+    queryKey: ["tecnologies"],
+    queryFn: getTecnologies,
+  });
+
   return (
     <Component>
       <Profile />
       <Differentials />
       <AboutMe />
-      <Technologyes />
+      <Technologyes tecnologies={data?.data || []} />
       <ContactMe />
     </Component>
   );
