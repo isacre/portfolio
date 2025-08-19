@@ -1,0 +1,29 @@
+{
+  "kind": "collectionType",
+  "collectionName": "projects",
+  "info": {
+    "singularName": "project",
+    "pluralName": "projects",
+    "displayName": "Project"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "name": {
+      "type": "string"
+    },
+    "link": {
+      "type": "string"
+    },
+    "tecnologies": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::tecnology.tecnology"
+    },
+    "description": {
+      "type": "string"
+    }
+  }
+}
