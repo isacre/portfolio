@@ -31,7 +31,7 @@ export const Routes = styled.div<any>`
 
     &.selected p {
       color: var(--color-main);
-      ::before {
+      &::before {
         content: "";
         position: absolute;
         width: 100%;
@@ -56,7 +56,7 @@ export const Routes = styled.div<any>`
     position: relative;
     transition: all 0.3s ease-in-out;
 
-    ::before {
+    &::before {
       content: "";
       position: absolute;
       width: 100%;
@@ -73,7 +73,7 @@ export const Routes = styled.div<any>`
     :hover {
       color: var(--color-main);
 
-      ::before {
+      &::before {
         transform: scaleX(1);
         transform-origin: bottom left;
       }

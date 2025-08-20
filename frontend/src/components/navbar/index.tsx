@@ -27,12 +27,11 @@ export default function NavBar(props: { url: string }) {
         return { id, element };
       }).filter((section) => section.element);
 
-      const scrollPosition = window.scrollY + 120;
+      const scrollPosition = window.scrollY - 120;
 
       for (let i = sections.length - 1; i >= 0; i--) {
         const section = sections[i];
         if (section.element && section.element.offsetTop <= scrollPosition) {
-          console.log("Setting active section to:", section.id);
           setActiveSection(section.id);
           break;
         }

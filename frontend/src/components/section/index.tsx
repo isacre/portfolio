@@ -7,7 +7,7 @@ const Text = styled.div`
   align-items: center;
   font-weight: 500;
   margin-bottom: 5px;
-  ::before {
+  &::before {
     margin-right: 10px;
     display: block;
     content: "";

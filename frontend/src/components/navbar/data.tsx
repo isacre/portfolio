@@ -7,12 +7,12 @@ export const Menus: Menu[] = [
     route: "/home/#about",
   },
   {
-    text: "Projetos",
-    route: "/home/#projects",
-  },
-  {
     text: "Carreira",
     route: "/home/#carrer",
+  },
+  {
+    text: "Projetos",
+    route: "/home/#projects",
   },
   {
     text: "Entre em contato",

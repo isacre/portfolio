@@ -18,12 +18,10 @@ export default function Description() {
   return (
     <AboutMeSection>
       <Section title="Quem sou eu?" />
-      <h1>
-        SOBRE <b>MIM</b>
-      </h1>
+      <h1>SOBRE MIM</h1>
       <p>
         Tenho 25 anos e moro no Amapá. Há mais de 4 anos atuo como{" "}
-        <b>desenvolvedor full stack</b> com foco em <b>frontend</b>, criando
+        <b>desenvolvedor full-stack</b> com foco em <b>front-end</b>, criando
         soluções web modernas, performáticas e escaláveis.
       </p>
       <br />
