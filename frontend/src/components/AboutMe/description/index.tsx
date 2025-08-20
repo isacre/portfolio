@@ -1,6 +1,5 @@
 import styled from "styled-components";
-import ilustration from "../../../assets/nobg.png";
-import Section from "../../section";
+import Section from "@/components/section";
 
 const AboutMeSection = styled.section`
   text-align: justify;
@@ -12,25 +11,6 @@ const AboutMeSection = styled.section`
     max-width: 100%;
     line-height: 25px;
     font-weight: 400;
-  }
-`;
-
-const ImgWrapper = styled.div`
-  display: flex;
-  align-items: center;
-  justify-content: center;
-`;
-
-const ContentWrapper = styled.div`
-  display: flex;
-  align-items: flex-start;
-  justify-content: space-between;
-  .text {
-    width: 450px;
-  }
-
-  img {
-    width: 350px;
   }
 `;
 
