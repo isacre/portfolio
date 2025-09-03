@@ -1,4 +1,4 @@
-# Portfolio Project
+# Portfolio Project [👷In Progress]
 
 A modern, responsive portfolio website built with Next.js featuring internationalization (i18n) and powered by a headless CMS backend.
 
