@@ -5,19 +5,19 @@ import React from "react";
 const mockCareerData = [
   {
     date: "06/2025",
-    title: "Desenvolvedor Full Stack Senior",
+    title: "Triagil - Desenvolvedor Full Stack Senior",
     description:
-      "Atualmente trabalho como desenvolvedor full-stack senior na Triagil, onde sou responsável pelo desenvolvimento e manutenção dos 3 produtos principais da empresa: Autorizai, Auditai e Analisaí.",
+      "Responsável pelo desenvolvimento e manutenção dos 3 produtos principais da empresa: Autorizai, Auditai e Analisaí.",
   },
   {
     date: "06/2023",
-    title: "Desenvolvedor Full-Stack Pleno",
+    title: "Triagil - Desenvolvedor Full-Stack Pleno",
     description:
       "Fui promovido para desenvolvedor full-stack pleno, assumindo a responsabilidade de tutorar novos desenvolvedores e também coloborar com o projeto de ponta a ponta.",
   },
   {
     date: "01/2022",
-    title: "Desenvolvedor Frontend Júnior",
+    title: "Triagil - Desenvolvedor Frontend Júnior",
     description:
       "Entrei na Triágil como o primeiro desenvolvedor frontend da empresa, tive a oportunidade de fazer do zero o dashboard do Autorizai com React e Typescript e assumir 100% da responsabilidade do projeto.",
   },
