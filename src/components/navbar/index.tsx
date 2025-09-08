@@ -1,5 +1,4 @@
 import React, { useState, useEffect } from "react";
-import { Menus, SocialMedia } from "./data";
 import {
   ContactMe,
   Content,
@@ -9,25 +8,28 @@ import {
 } from "./styles";
 import Logo from "../../assets/svg/logo";
 import { AiOutlineClose, AiOutlineMenu } from "react-icons/ai";
+import { Menu, SocialMediaRoute } from "@/types";
 
-export const findSelectedRoute = (url: string, route: string) => {
-  if (url === route) return "selected";
-  else return "";
-};
+interface Props {
+  menus: Menu[];
+  socialMedia: SocialMediaRoute[];
+}
 
-export default function NavBar(props: { url: string }) {
+export default function NavBar({ menus, socialMedia }: Props) {
   const [ShowRoutes, setShowRoutes] = useState(true);
   const [activeSection, setActiveSection] = useState("");
 
   useEffect(() => {
     const handleScroll = () => {
-      const sections = Menus.map((menu) => {
-        const id = menu.route.split("#")[1];
-        const element = document.getElementById(id);
-        return { id, element };
-      }).filter((section) => section.element);
+      const sections = menus
+        .map((menu) => {
+          const id = menu.route.split("#")[1];
+          const element = document.getElementById(id);
+          return { id, element };
+        })
+        .filter((section) => section.element);
 
-      const scrollPosition = window.scrollY - 120;
+      const scrollPosition = window.scrollY + 100;
 
       for (let i = sections.length - 1; i >= 0; i--) {
         const section = sections[i];
@@ -39,10 +41,10 @@ export default function NavBar(props: { url: string }) {
     };
 
     window.addEventListener("scroll", handleScroll);
-    handleScroll(); // Check initial position
+    handleScroll();
 
     return () => window.removeEventListener("scroll", handleScroll);
-  }, []);
+  }, [menus]);
 
   const handleNavClick = (
     e: React.MouseEvent<HTMLAnchorElement>,
@@ -52,7 +54,13 @@ export default function NavBar(props: { url: string }) {
     const id = route.split("#")[1];
     const element = document.getElementById(id);
     if (element) {
-      element.scrollIntoView({ behavior: "smooth" });
+      const offset = 100;
+      const elementPosition =
+        element.getBoundingClientRect().top + window.scrollY;
+      window.scrollTo({
+        top: elementPosition - offset,
+        behavior: "smooth",
+      });
     } else {
       console.warn(`Section with id "${id}" not found`);
     }
@@ -64,7 +72,7 @@ export default function NavBar(props: { url: string }) {
         <Logo />
       </LogoWrapper>
       <Routes showRoutes={ShowRoutes}>
-        {Menus.map((menu) => {
+        {menus.map((menu) => {
           const id = menu.route.split("#")[1];
           return (
             <a
@@ -79,7 +87,7 @@ export default function NavBar(props: { url: string }) {
         })}
       </Routes>
       <ContactMe>
-        {SocialMedia.map((socialmedia) => {
+        {socialMedia.map((socialmedia) => {
           return (
             <div key={socialmedia.route}>
               <a href={socialmedia.route} target="_blank" rel="noreferrer">

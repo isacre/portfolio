@@ -3,6 +3,8 @@ import styled from "styled-components";
 import NavBar from "../../components/navbar";
 import { Outlet, useNavigate } from "react-router";
 import { useLocation } from "react-router-dom";
+import { Menus } from "./data";
+import { SocialMedia } from "./data";
 
 const Component = styled.div`
   display: flex;
@@ -27,7 +29,7 @@ export default function DefaultLayout() {
 
   return (
     <Component>
-      <NavBar url={currentUrl} />
+      <NavBar menus={Menus} socialMedia={SocialMedia} />
       <Outlet />
     </Component>
   );

@@ -1,24 +1,13 @@
-import React from "react";
 import styled from "styled-components";
 
-interface TimelineItemProps {
-  date: string;
-  title: string;
-  description: string;
-}
-
-interface TimelineProps {
-  items: TimelineItemProps[];
-}
-
-const TimelineContainer = styled.div`
+export const TimelineContainer = styled.div`
   position: relative;
   max-width: 800px;
   margin: 0 auto;
   padding: 20px 0;
 `;
 
-const TimelineLine = styled.div`
+export const TimelineLine = styled.div`
   position: absolute;
   left: 50%;
   top: 0;
@@ -32,7 +21,7 @@ const TimelineLine = styled.div`
   }
 `;
 
-const TimelineItem = styled.div<{ isEven: boolean }>`
+export const TimelineItem = styled.div<{ isEven: boolean }>`
   position: relative;
   margin-bottom: 40px;
   display: flex;
@@ -50,7 +39,7 @@ const TimelineItem = styled.div<{ isEven: boolean }>`
       : ""}
 `;
 
-const TimelineContent = styled.div<{ isEven: boolean }>`
+export const TimelineContent = styled.div<{ isEven: boolean }>`
   width: 45%;
   padding: 20px;
   background: rgba(255, 255, 255, 0.05);
@@ -84,7 +73,7 @@ const TimelineContent = styled.div<{ isEven: boolean }>`
   `}
 `;
 
-const TimelineDot = styled.div`
+export const TimelineDot = styled.div`
   position: absolute;
   left: 50%;
   top: 50%;
@@ -101,7 +90,7 @@ const TimelineDot = styled.div`
   }
 `;
 
-const Date = styled.div`
+export const Date = styled.div`
   font-size: 12px;
   color: var(--color-main);
   font-weight: 600;
@@ -110,7 +99,7 @@ const Date = styled.div`
   letter-spacing: 1px;
 `;
 
-const Title = styled.h3`
+export const Title = styled.h3`
   font-size: 18px;
   color: #ffffff;
   margin-bottom: 10px;
@@ -118,27 +107,9 @@ const Title = styled.h3`
   font-family: Raleway, sans-serif;
 `;
 
-const Description = styled.p`
+export const Description = styled.p`
   font-size: 14px;
   color: #cccccc;
   line-height: 1.6;
   font-weight: 400;
 `;
-
-export default function Timeline({ items }: TimelineProps) {
-  return (
-    <TimelineContainer>
-      <TimelineLine />
-      {items.map((item, index) => (
-        <TimelineItem key={index} isEven={index % 2 === 1}>
-          <TimelineDot />
-          <TimelineContent isEven={index % 2 === 1}>
-            <Date>{item.date}</Date>
-            <Title>{item.title}</Title>
-            <Description>{item.description}</Description>
-          </TimelineContent>
-        </TimelineItem>
-      ))}
-    </TimelineContainer>
-  );
-}

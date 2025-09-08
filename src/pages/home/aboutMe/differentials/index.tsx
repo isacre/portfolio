@@ -1,5 +1,5 @@
 import styled from "styled-components";
-import Section from "../../section";
+import Section from "../../../../components/section";
 
 const DifferencialsSection = styled.div`
   height: fit-content;
@@ -60,34 +60,34 @@ export default function Differentials() {
   const Differentials = [
     {
       description:
-        "Busco sempre criar código de qualidade, visando a escalabilidade e facilitar as manutenções futuras",
+        "I always seek to create quality code, aiming for scalability and facilitating future maintenance",
       title: "Front-end",
-      subtitle: "Qualidade de código",
+      subtitle: "Code quality",
     },
     {
       description:
-        "Me expresso e faço amizade com facilidade, evito conflitos desnecessários e sei me adaptar ao meio em que me encontro",
-      title: "Pessoal",
-      subtitle: "Comunicação",
+        "I express myself and make friends easily, I avoid unnecessary conflicts and I know how to adapt to the environment I'm in",
+      title: "Personal",
+      subtitle: "Communication",
     },
     {
       description:
-        "Estou em constante desenvolvimento e aprendizado. Sei onde quero chegar e busco me esforçar pra crescer como pessoa e como profissional diariamente",
-      title: "Pessoal",
-      subtitle: "Automotivação",
+        "I'm in constant development and learning. I know where I want to go and I strive to grow as a person and as a professional daily",
+      title: "Personal",
+      subtitle: "Self-motivation",
     },
     {
       description:
-        "Sempre sonhei em trabalhar com algo que envolvesse tecnologia e criatividade.",
+        "I always dreamed of working with something that involved technology and creativity.",
       title: "Front-end",
-      subtitle: "Amor pelo o que faz",
+      subtitle: "Love for what I do",
     },
   ];
   return (
     <DifferencialsSection>
-      <Section title="Meus diferenciais" />
+      <Section title="My differentials" />
       <h1>
-        O QUE ME <b>DESTACA</b>
+        WHAT <b>MAKES ME STAND OUT</b>
       </h1>
       <Container>
         {Differentials.map((skill) => {
