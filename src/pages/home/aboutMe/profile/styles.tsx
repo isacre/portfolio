@@ -40,6 +40,10 @@ export const Picture = styled.img`
   object-fit: cover;
   box-shadow: 0 0 20px 0 rgba(220, 53, 69, 0.12),
     0 0 8px 0 rgba(220, 53, 69, 0.08);
+
+  @media (max-width: 900px) {
+    display: none;
+  }
 `;
 
 export const SocialMediaButtons = styled.div`

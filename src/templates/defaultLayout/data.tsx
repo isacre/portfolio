@@ -12,7 +12,7 @@ export const Menus: Menu[] = [
   },
   {
     text: "Career",
-    route: "/home/#carrer",
+    route: "/home/#career",
   },
 ];
 

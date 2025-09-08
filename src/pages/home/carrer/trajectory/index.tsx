@@ -1,6 +1,5 @@
 import Section from "@/components/section";
 import Timeline from "@/components/timeline";
-import React from "react";
 
 const mockCareerData = [
   {
@@ -30,7 +29,7 @@ const mockCareerData = [
 
 export default function Trajectory() {
   return (
-    <div id="career" style={{ scrollMarginTop: "120px" }}>
+    <div id="career">
       <Section title="My Career" />
       <Timeline items={mockCareerData} />
     </div>
