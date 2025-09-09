@@ -82,28 +82,42 @@ export const Routes = styled.div<any>`
 
   @media (max-width: 800px) {
     display: flex;
-    position: absolute;
+    position: fixed;
     justify-content: flex-start;
     flex-direction: column;
-    align-items: right;
-    left: ${(props) => (props.showRoutes ? "-300px" : "0px")};
+    align-items: flex-start;
+    left: ${(props) => (props.showRoutes ? "0px" : "-100%")};
     bottom: 0;
-    top: 0;
-    width: 300px;
+    top: 100px;
+    width: 280px;
     background-color: var(--color-background-black);
-    filter: brightness(150%);
-    opacity: 99%;
-    transition: all 200ms ease-in-out;
+    backdrop-filter: blur(10px);
+    opacity: ${(props) => (props.showRoutes ? "0.98" : "0")};
+    visibility: ${(props) => (props.showRoutes ? "visible" : "hidden")};
+    transition: all 300ms ease-in-out;
+    z-index: 999;
+    padding: 20px 0;
+    box-shadow: 2px 0 10px rgba(0, 0, 0, 0.3);
 
     p {
-      padding: 10px;
-      margin-bottom: 10px;
-      justify-self: flex-start;
+      padding: 15px 20px;
+      margin-bottom: 5px;
+      width: 100%;
+      font-size: 18px;
+      border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+
+      &:last-child {
+        border-bottom: none;
+      }
     }
 
     a {
-      :first-child {
-        justify-self: flex-end;
+      width: 100%;
+      display: block;
+
+      &:hover p {
+        background-color: rgba(255, 255, 255, 0.05);
+        color: var(--color-main);
       }
     }
   }
@@ -170,5 +184,24 @@ export const ModalHandlerIcon = styled.span`
     display: flex;
     align-items: center;
     justify-content: center;
+  }
+`;
+
+export const MobileOverlay = styled.div`
+  display: none;
+
+  @media (max-width: 800px) {
+    display: block;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 998;
+    backdrop-filter: blur(2px);
+    opacity: 1;
+    visibility: visible;
+    transition: opacity 300ms ease-in-out;
   }
 `;

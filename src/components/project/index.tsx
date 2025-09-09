@@ -4,7 +4,7 @@ import { FaGithub, FaExternalLinkAlt } from "react-icons/fa";
 
 const Wrapper = styled.div`
   background: linear-gradient(145deg, #4a5568, #2d3748);
-  width: 350px;
+  width: 100%;
   border-radius: 20px;
   box-shadow: 0 8px 32px rgba(0, 0, 0, 0.15);
   display: flex;

@@ -10,7 +10,7 @@ export const ProjectsData = [
     github: "https://github.com/isacre/i-manage",
     liveDemo: null,
     image: image,
-    video: "https://youtu.be/cP1Qexrpmzk",
+    video: "https://youtu.be/Ys5FP0LKm3E",
     technologies: [
       "Next.js",
       "TypeScript",

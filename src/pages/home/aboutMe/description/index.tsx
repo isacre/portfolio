@@ -12,6 +12,11 @@ const AboutMeSection = styled.section`
     line-height: 25px;
     font-weight: 400;
   }
+
+  @media (max-width: 768px) {
+    padding-left: 15px;
+    padding-right: 15px;
+  }
 `;
 
 export default function Description() {

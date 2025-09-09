@@ -1,6 +1,13 @@
 import Section from "@/components/section";
 import Timeline from "@/components/timeline";
+import styled from "styled-components";
 
+const CarrerSection = styled.section`
+  @media (max-width: 768px) {
+    padding-left: 15px;
+    padding-right: 15px;
+  }
+`;
 const mockCareerData = [
   {
     date: "06/2025",
@@ -29,9 +36,11 @@ const mockCareerData = [
 
 export default function Trajectory() {
   return (
-    <div id="career">
+    <CarrerSection id="career">
       <Section title="My Career" />
+      <h1>WHERE I'VE BEEN</h1>
+      <br />
       <Timeline items={mockCareerData} />
-    </div>
+    </CarrerSection>
   );
 }

@@ -5,6 +5,7 @@ import {
   LogoWrapper,
   Routes,
   ModalHandlerIcon,
+  MobileOverlay,
 } from "./styles";
 import Logo from "../../assets/svg/logo";
 import { AiOutlineClose, AiOutlineMenu } from "react-icons/ai";
@@ -16,7 +17,7 @@ interface Props {
 }
 
 export default function NavBar({ menus, socialMedia }: Props) {
-  const [ShowRoutes, setShowRoutes] = useState(true);
+  const [ShowRoutes, setShowRoutes] = useState(false);
   const [activeSection, setActiveSection] = useState("");
 
   useEffect(() => {
@@ -61,45 +62,50 @@ export default function NavBar({ menus, socialMedia }: Props) {
         top: elementPosition - offset,
         behavior: "smooth",
       });
+      // Close mobile menu when clicking on a menu item
+      setShowRoutes(false);
     } else {
       console.warn(`Section with id "${id}" not found`);
     }
   };
 
   return (
-    <Content>
-      <LogoWrapper>
-        <Logo />
-      </LogoWrapper>
-      <Routes showRoutes={ShowRoutes}>
-        {menus.map((menu) => {
-          const id = menu.route.split("#")[1];
-          return (
-            <a
-              key={menu.route}
-              href={menu.route}
-              onClick={(e) => handleNavClick(e, menu.route)}
-              className={activeSection === id ? "selected" : ""}
-            >
-              <p>{menu.text}</p>
-            </a>
-          );
-        })}
-      </Routes>
-      <ContactMe>
-        {socialMedia.map((socialmedia) => {
-          return (
-            <div key={socialmedia.route}>
-              <a href={socialmedia.route} target="_blank" rel="noreferrer">
-                <socialmedia.icon />
+    <>
+      <Content>
+        <LogoWrapper>
+          <Logo />
+        </LogoWrapper>
+        <Routes showRoutes={ShowRoutes}>
+          {menus.map((menu) => {
+            const id = menu.route.split("#")[1];
+            return (
+              <a
+                key={menu.route}
+                href={menu.route}
+                onClick={(e) => handleNavClick(e, menu.route)}
+                className={activeSection === id ? "selected" : ""}
+              >
+                <p>{menu.text}</p>
               </a>
-            </div>
-          );
-        })}
-        <ModalHandlerIcon onClick={() => setShowRoutes(!ShowRoutes)}>
-          <a>{ShowRoutes ? <AiOutlineMenu /> : <AiOutlineClose />}</a>
-        </ModalHandlerIcon>
-      </ContactMe>
-    </Content>
+            );
+          })}
+        </Routes>
+        <ContactMe>
+          {socialMedia.map((socialmedia) => {
+            return (
+              <div key={socialmedia.route}>
+                <a href={socialmedia.route} target="_blank" rel="noreferrer">
+                  <socialmedia.icon />
+                </a>
+              </div>
+            );
+          })}
+          <ModalHandlerIcon onClick={() => setShowRoutes(!ShowRoutes)}>
+            <a>{ShowRoutes ? <AiOutlineClose /> : <AiOutlineMenu />}</a>
+          </ModalHandlerIcon>
+        </ContactMe>
+      </Content>
+      {ShowRoutes && <MobileOverlay onClick={() => setShowRoutes(false)} />}
+    </>
   );
 }

@@ -5,6 +5,11 @@ export const IntroductionSection = styled.div`
   display: flex;
   align-items: center;
   scroll-margin-top: 120px;
+
+  @media (max-width: 768px) {
+    padding-left: 15px;
+    padding-right: 15px;
+  }
 `;
 
 export const IntroductionWrapper = styled.div`
@@ -22,7 +27,6 @@ export const Introduction = styled.div`
   display: flex;
   flex-direction: column;
   font-family: Raleway, sans-serif;
-  padding-left: 15px;
 
   p {
     font-family: Raleway, sans-serif;
