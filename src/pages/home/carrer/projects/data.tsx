@@ -23,13 +23,11 @@ export const ProjectsData = [
     ],
     features: [
       "Real-time appointment scheduling and management",
-      "Customer database with contact information and booking history",
-      "Google Calendar integration for seamless scheduling",
+      "Google Calendar integration for seamless scheduling and reminders",
       "Secure payment processing with Stripe",
       "White-label customization for different businesses",
       "Responsive design for mobile and desktop",
-      "Admin dashboard for business analytics",
-      "Email notifications and reminders",
+      "Automatic booking expiration and completion with cron job scripts",
     ],
   },
 ];
