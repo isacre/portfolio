@@ -1,5 +1,5 @@
+import { BsGithub, BsLinkedin } from "react-icons/bs";
 import { Menu, SocialMediaRoute } from "../../types";
-import { BsLinkedin, BsGithub, BsInstagram } from "react-icons/bs";
 
 export const Menus: Menu[] = [
   {

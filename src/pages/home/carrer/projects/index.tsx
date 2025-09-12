@@ -4,59 +4,29 @@ import { ProjectsData } from "./data";
 import Project from "@/components/project";
 import Modal from "@/components/modal";
 import ProjectModal from "@/components/projectModal";
-import styled from "styled-components";
+import { ProjectsSection, ProjectsList } from "./styles";
 import { motion } from "framer-motion";
+import {
+  fadeInUp,
+  staggerContainer,
+  projectStaggerContainer,
+} from "./animations";
 
-const ProjectsSection = styled.section`
-  @media (max-width: 768px) {
-    padding-left: 15px;
-    padding-right: 15px;
-  }
-`;
-const ProjectsList = styled.div`
-  display: grid;
-  gap: 20px;
-  width: 100%;
-  max-width: 1200px;
-  margin: 0 auto;
-`;
 export default function Projects() {
   const [selectedProject, setSelectedProject] = useState<
     (typeof ProjectsData)[0] | null
   >(null);
   const [isModalOpen, setIsModalOpen] = useState(false);
 
-  const handleProjectClick = (project: (typeof ProjectsData)[0]) => {
+  function handleProjectClick(project: (typeof ProjectsData)[0]) {
     setSelectedProject(project);
     setIsModalOpen(true);
-  };
+  }
 
-  const handleCloseModal = () => {
+  function handleCloseModal() {
     setIsModalOpen(false);
     setSelectedProject(null);
-  };
-
-  const fadeInUp = {
-    initial: { opacity: 0, y: 40 },
-    animate: { opacity: 1, y: 0 },
-    transition: { duration: 0.4, ease: "easeOut" },
-  };
-
-  const staggerContainer = {
-    animate: {
-      transition: {
-        staggerChildren: 0.1,
-      },
-    },
-  };
-
-  const projectStaggerContainer = {
-    animate: {
-      transition: {
-        staggerChildren: 0.1,
-      },
-    },
-  };
+  }
 
   return (
     <ProjectsSection id="projects">

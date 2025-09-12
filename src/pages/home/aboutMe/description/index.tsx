@@ -1,42 +1,8 @@
-import styled from "styled-components";
 import { motion } from "framer-motion";
 import Section from "@/components/section";
-
-const AboutMeSection = styled.section`
-  text-align: justify;
-  scroll-margin-top: 120px;
-  height: 100%;
-
-  p {
-    font-family: Raleway, sans-serif;
-    margin-top: 5px;
-    font-size: 18px;
-    max-width: 100%;
-    line-height: 25px;
-    font-weight: 400;
-  }
-
-  @media (max-width: 768px) {
-    padding-left: 15px;
-    padding-right: 15px;
-  }
-`;
-
+import { AboutMeSection } from "./styles";
+import { fadeInUp, staggerContainer } from "./animations";
 export default function Description() {
-  const fadeInUp = {
-    initial: { opacity: 0, y: 40 },
-    animate: { opacity: 1, y: 0 },
-    transition: { duration: 0.4, ease: "easeOut" },
-  };
-
-  const staggerContainer = {
-    animate: {
-      transition: {
-        staggerChildren: 0.15,
-      },
-    },
-  };
-
   return (
     <AboutMeSection>
       <motion.div

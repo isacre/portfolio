@@ -9,6 +9,7 @@ import {
   Description,
 } from "./styles";
 import { motion } from "framer-motion";
+import { fadeInUp, staggerContainer } from "./animations";
 
 interface TimelineItemType {
   date: string;
@@ -21,20 +22,6 @@ interface Props {
 }
 
 export default function Timeline({ items }: Props) {
-  const fadeInUp = {
-    initial: { opacity: 0, y: 40 },
-    animate: { opacity: 1, y: 0 },
-    transition: { duration: 0.4, ease: "easeOut" },
-  };
-
-  const staggerContainer = {
-    animate: {
-      transition: {
-        staggerChildren: 0.15,
-      },
-    },
-  };
-
   return (
     <TimelineContainer>
       <TimelineLine />

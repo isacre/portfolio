@@ -20,6 +20,28 @@ export default function NavBar({ menus, socialMedia }: Props) {
   const [ShowRoutes, setShowRoutes] = useState(false);
   const [activeSection, setActiveSection] = useState("");
 
+  function handleNavClick(
+    e: React.MouseEvent<HTMLAnchorElement>,
+    route: string
+  ) {
+    e.preventDefault();
+    const id = route.split("#")[1];
+    const element = document.getElementById(id);
+    if (element) {
+      const offset = 100;
+      const elementPosition =
+        element.getBoundingClientRect().top + window.scrollY;
+      window.scrollTo({
+        top: elementPosition - offset,
+        behavior: "smooth",
+      });
+      // Close mobile menu when clicking on a menu item
+      setShowRoutes(false);
+    } else {
+      console.warn(`Section with id "${id}" not found`);
+    }
+  }
+
   useEffect(() => {
     const handleScroll = () => {
       const sections = menus
@@ -46,28 +68,6 @@ export default function NavBar({ menus, socialMedia }: Props) {
 
     return () => window.removeEventListener("scroll", handleScroll);
   }, [menus]);
-
-  const handleNavClick = (
-    e: React.MouseEvent<HTMLAnchorElement>,
-    route: string
-  ) => {
-    e.preventDefault();
-    const id = route.split("#")[1];
-    const element = document.getElementById(id);
-    if (element) {
-      const offset = 100;
-      const elementPosition =
-        element.getBoundingClientRect().top + window.scrollY;
-      window.scrollTo({
-        top: elementPosition - offset,
-        behavior: "smooth",
-      });
-      // Close mobile menu when clicking on a menu item
-      setShowRoutes(false);
-    } else {
-      console.warn(`Section with id "${id}" not found`);
-    }
-  };
 
   return (
     <>

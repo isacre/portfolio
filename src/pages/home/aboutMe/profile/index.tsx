@@ -10,34 +10,9 @@ import {
 } from "./styles";
 import profilePicture from "@/assets/picture.png";
 import Section from "@/components/section";
+import { fadeInUp, staggerContainer } from "./animations";
 
 export default function Profile() {
-  const fadeInUp = {
-    initial: { opacity: 0, y: 40 },
-    animate: { opacity: 1, y: 0 },
-    transition: { duration: 0.4, ease: "easeOut" },
-  };
-
-  const fadeInLeft = {
-    initial: { opacity: 0, x: -40 },
-    animate: { opacity: 1, x: 0 },
-    transition: { duration: 0.4, ease: "easeOut" },
-  };
-
-  const fadeInRight = {
-    initial: { opacity: 0, x: 40 },
-    animate: { opacity: 1, x: 0 },
-    transition: { duration: 0.4, ease: "easeOut" },
-  };
-
-  const staggerContainer = {
-    animate: {
-      transition: {
-        staggerChildren: 0.1,
-      },
-    },
-  };
-
   return (
     <IntroductionSection id="about">
       <IntroductionWrapper>

@@ -1,61 +1,12 @@
-import styled from "styled-components";
 import { motion } from "framer-motion";
 import Section from "../../../../components/section";
-
-const DifferencialsSection = styled.div`
-  height: fit-content;
-  scroll-margin-top: 120px;
-
-  h1 {
-    width: 200px;
-  }
-`;
-
-const Container = styled.div`
-  padding-top: 10px;
-  width: 100%;
-  height: fit-content;
-  margin-bottom: 25px;
-  display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  justify-content: space-between;
-  gap: 10px;
-  @media (max-width: 1250px) {
-    grid-template-columns: repeat(2, 1fr);
-  }
-
-  @media (max-width: 650px) {
-    grid-template-columns: 1fr;
-  }
-`;
-
-const Skill = styled.div`
-  min-width: 249px;
-  height: 200px;
-  padding: 25px 21px;
-  border-radius: 10px;
-  box-shadow: 5px 5px 10px rgb(0 0 0 / 25%);
-  transition: all 0.3s ease-in-out;
-  background: linear-gradient(120deg, #26282a -10%, rgba(45, 48, 54, 0) 105%);
-  line-height: 150%;
-  font-weight: 600;
-  text-align: distribute;
-  hyphens: auto;
-
-  .title {
-  }
-
-  .subtitle {
-    color: var(--color-main);
-  }
-
-  .description {
-    height: 140px;
-    display: flex;
-    margin-top: 10px;
-    color: hsla(0, 0%, 100%, 0.459);
-  }
-`;
+import {
+  fadeInUp,
+  fadeInUpStagger,
+  staggerContainer,
+  cardStaggerContainer,
+} from "./animations";
+import { DifferencialsSection, Container, Skill } from "./styles";
 
 export default function Differentials() {
   const Differentials = [
@@ -84,34 +35,6 @@ export default function Differentials() {
       subtitle: "Love for what I do",
     },
   ];
-
-  const fadeInUp = {
-    initial: { opacity: 0, y: 40 },
-    animate: { opacity: 1, y: 0 },
-    transition: { duration: 0.4, ease: "easeOut" },
-  };
-
-  const fadeInUpStagger = {
-    initial: { opacity: 0, y: 40 },
-    animate: { opacity: 1, y: 0 },
-    transition: { duration: 0.4, ease: "easeOut" },
-  };
-
-  const staggerContainer = {
-    animate: {
-      transition: {
-        staggerChildren: 0.1,
-      },
-    },
-  };
-
-  const cardStaggerContainer = {
-    animate: {
-      transition: {
-        staggerChildren: 0.08,
-      },
-    },
-  };
 
   return (
     <DifferencialsSection>

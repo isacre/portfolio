@@ -1,6 +1,10 @@
-/// <reference types="vite/client" />
+export function getYouTubeEmbedUrl(url: string): string {
+  const regExp = /^.*(youtu.be\/|v\/|u\/\w\/|embed\/|watch\?v=|&v=)([^#&?]*).*/;
+  const match = url.match(regExp);
 
-export default function BuildImageUrl(url: string) {
-  if (!url) return "";
-  return `${import.meta.env.VITE_API_URL.replace("/api", "")}${url}`;
+  if (match && match[2].length === 11) {
+    return `https://www.youtube.com/embed/${match[2]}`;
+  }
+
+  return url;
 }
