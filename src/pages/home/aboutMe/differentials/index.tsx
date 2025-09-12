@@ -1,4 +1,5 @@
 import styled from "styled-components";
+import { motion } from "framer-motion";
 import Section from "../../../../components/section";
 
 const DifferencialsSection = styled.div`
@@ -83,23 +84,65 @@ export default function Differentials() {
       subtitle: "Love for what I do",
     },
   ];
+
+  const fadeInUp = {
+    initial: { opacity: 0, y: 40 },
+    animate: { opacity: 1, y: 0 },
+    transition: { duration: 0.4, ease: "easeOut" },
+  };
+
+  const fadeInUpStagger = {
+    initial: { opacity: 0, y: 40 },
+    animate: { opacity: 1, y: 0 },
+    transition: { duration: 0.4, ease: "easeOut" },
+  };
+
+  const staggerContainer = {
+    animate: {
+      transition: {
+        staggerChildren: 0.1,
+      },
+    },
+  };
+
+  const cardStaggerContainer = {
+    animate: {
+      transition: {
+        staggerChildren: 0.08,
+      },
+    },
+  };
+
   return (
     <DifferencialsSection>
-      <Section title="My differentials" />
-      <h1>
-        WHAT <b>MAKES ME STAND OUT</b>
-      </h1>
-      <Container>
-        {Differentials.map((skill) => {
-          return (
-            <Skill>
-              <div className="title">{skill.title}</div>
-              <div className="subtitle">{skill.subtitle}</div>
-              <div className="description">{skill.description}</div>
-            </Skill>
-          );
-        })}
-      </Container>
+      <motion.div
+        variants={staggerContainer}
+        initial="initial"
+        animate="animate"
+        transition={{ delay: 1.7 }}
+      >
+        <motion.div variants={fadeInUp}>
+          <Section title="My differentials" />
+        </motion.div>
+        <motion.h1 variants={fadeInUp}>
+          WHAT <b>MAKES ME STAND OUT</b>
+        </motion.h1>
+        <motion.div variants={cardStaggerContainer}>
+          <Container>
+            {Differentials.map((skill, index) => {
+              return (
+                <motion.div key={index} variants={fadeInUpStagger}>
+                  <Skill>
+                    <div className="title">{skill.title}</div>
+                    <div className="subtitle">{skill.subtitle}</div>
+                    <div className="description">{skill.description}</div>
+                  </Skill>
+                </motion.div>
+              );
+            })}
+          </Container>
+        </motion.div>
+      </motion.div>
     </DifferencialsSection>
   );
 }
