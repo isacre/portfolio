@@ -4,6 +4,8 @@ import Section from "@/components/section";
 const AboutMeSection = styled.section`
   text-align: justify;
   scroll-margin-top: 120px;
+  height: 100%;
+
   p {
     font-family: Raleway, sans-serif;
     margin-top: 5px;

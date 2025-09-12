@@ -8,4 +8,5 @@ export const Component = styled.div`
   margin: 0px auto;
   padding-bottom: 100px;
   padding-top: 20px;
+  height: 100%;
 `;

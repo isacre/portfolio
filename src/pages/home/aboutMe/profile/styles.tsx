@@ -1,7 +1,6 @@
 import styled from "styled-components";
 
 export const IntroductionSection = styled.div`
-  height: 450px;
   display: flex;
   align-items: center;
   scroll-margin-top: 120px;
@@ -17,6 +16,13 @@ export const IntroductionWrapper = styled.div`
   justify-content: space-between;
   align-items: center;
   width: 100%;
+  height: 100%;
+
+  @media (max-width: 900px) {
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+  }
 `;
 export const Introduction = styled.div`
   font-size: 35px;
@@ -46,7 +52,9 @@ export const Picture = styled.img`
     0 0 8px 0 rgba(220, 53, 69, 0.08);
 
   @media (max-width: 900px) {
-    display: none;
+    order: -1;
+    width: 250px;
+    height: 250px;
   }
 `;
 
