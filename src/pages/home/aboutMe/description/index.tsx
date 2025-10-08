@@ -16,7 +16,7 @@ export default function Description() {
         </motion.div>
         <motion.h1 variants={fadeInUp}>ABOUT ME</motion.h1>
         <motion.p variants={fadeInUp}>
-          I'm 25 years old and live in Amapá. For over 4 years I've been working
+          I'm 25 years old and live in Amapá. For over 5 years I've been working
           as a <b>full-stack developer</b> with a focus on <b>front-end</b>,
           creating modern, performant and scalable web solutions.
         </motion.p>
