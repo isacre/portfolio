@@ -19,7 +19,7 @@ export default function Trajectory() {
         "I was promoted to mid-level full-stack developer, taking on the responsibility of mentoring new developers and also collaborating on end-to-end projects.",
     },
     {
-      date: "11/2020",
+      date: "01/2021",
       title: "Triagil - Junior Frontend Developer",
       description:
         "I joined Triágil as the company's first frontend developer, I had the opportunity to build the Autorizai dashboard from scratch with React and Typescript and take 100% responsibility for the project.",
