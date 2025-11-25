@@ -1,4 +1,6 @@
 import image from "@/assets/projects/iManage.png";
+import copy from "@/assets/projects/copy.png";
+
 export const ProjectsData = [
   {
     name: "iManage",
@@ -28,6 +30,24 @@ export const ProjectsData = [
       "White-label customization for different businesses",
       "Responsive design for mobile and desktop",
       "Automatic booking expiration and completion with cron job scripts",
+    ],
+  },
+  {
+    name: "Quick Copy Extension",
+    description:
+      "Chrome extension that allows you to copy text to the clipboard easily.",
+    longDescription:
+      "Chrome extension that allows you to copy text to the clipboard easily. Developed to make my life easier when applying for jobs.",
+    href: "https://github.com/isacre/quick-copy-extension",
+    github: "https://github.com/isacre/quick-copy-extension",
+    video: "https://youtu.be/I161l23dY8I",
+    liveDemo: null,
+    image: copy,
+    technologies: ["TypeScript", "Chrome Extension API", "React"],
+    features: [
+      "Save title/link to future use",
+      "Delete links",
+      "Copy text to the clipboard",
     ],
   },
 ];
