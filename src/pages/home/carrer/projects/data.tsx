@@ -1,6 +1,6 @@
 import image from "@/assets/projects/iManage.png";
 import copy from "@/assets/projects/copy.png";
-import fixMyCar from "@/assets/projects/fixMyCar.png";
+import fixMyCar from "@/assets/projects/fixmycarai.png";
 
 export const ProjectsData = [
   {
