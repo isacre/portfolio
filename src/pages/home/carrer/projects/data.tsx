@@ -1,7 +1,32 @@
 import image from "@/assets/projects/iManage.png";
 import copy from "@/assets/projects/copy.png";
+import fixMyCar from "@/assets/projects/fixMyCar.png";
 
 export const ProjectsData = [
+  {
+    name: "Fix My Car AI",
+    description:
+      "RAG based AI assitant for car repair and maintenance",
+    longDescription:
+      "Fix My Car AI is a RAG based AI assistant for car repair and maintenance. It uses the knowledge base on a vector database and the LLM to answer questions about car repair and maintenance.",
+    href: "https://github.com/isacre/fix-my-car-ai",
+    github: "https://github.com/isacre/fix-my-car-ai",
+    liveDemo: null,
+    image: fixMyCar,
+    video: "https://youtu.be/GIsSCbKAi7U",
+    technologies: [
+      "Langchain",
+      "Langgraph",
+      "ChromaDB",
+      "OpenAI",
+      "Docker"
+    ],
+    features: [
+      "RAG based AI assistant for car repair and maintenance",
+      "Knowledge base on a vector database",
+      "LLM to answer questions about car repair and maintenance",
+    ],
+  },
   {
     name: "iManage",
     description:
